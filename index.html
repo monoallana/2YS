@@ -10,14 +10,14 @@
     <body style='margin : 0px; overflow: hidden;'>
       
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>    
-        <a-text value="Hello, World!"></a-text> 
+
         <a-assets>
             <img id="sorry" src="Sorry Rilakkuma.gif">
         </a-assets>
 
         <a-marker id="animated-marker" type='pattern' preset='custom' url='pattern-hert.patt'>
             <a-entity
-                image="#sorry"
+                im id="#sorry"
                 scale="6">
             </a-entity>
         </a-marker>
