@@ -8,20 +8,17 @@
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     
     <body style='margin : 0px; overflow: hidden;'>
-        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-            
-        <a-text value="Hello, World!"></a-text>
-        <a-image src="Sorry Rilakkuma.gif"></a-image>
-
+      
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>    
+        <a-text value="Hello, World!"></a-text> 
         <a-assets>
-            <a-asset-item id="animated-asset" src="donut.glb"></a-asset-item>
+            <img id="sorry" src="Sorry Rilakkuma.gif">
         </a-assets>
 
         <a-marker id="animated-marker" type='pattern' preset='custom' url='pattern-hert.patt'>
             <a-entity
-                gltf-model="#animated-asset"
-                scale="2">
+                image="#sorry"
+                scale="6">
             </a-entity>
         </a-marker>
 
